@@ -1,5 +1,6 @@
 from tika import parser
 
+#generalization to input pdf will be added
 filein = parser.from_file('autoMLcode_GD.pdf')
 textrawin=(filein['content']).strip().split('\n')
 rawlinesarray=[]
@@ -36,3 +37,8 @@ for entry in rawoutvarnames:
         outvarnames.append(newentry.strip())
 #above section extracts both the input and output variable information
 #from a pseudcode header
+for x in range(0,len(invardims)):
+    print(invarnames[x])
+    print(' ')
+    print(invardims[x])
+    print("\n")
