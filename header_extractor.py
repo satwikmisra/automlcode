@@ -9,7 +9,7 @@ for line in textrawin:
 numofvar=(rawlinesarray[0].replace('Number of variables: ',''))
 rawinvarnames=(rawlinesarray[1].replace('Input: ','').split(','))
 #period should be removed from end of input
-invardims=[]
+invardims=[] #if the value is zero, the entry is a scalar
 invarnames=[]
 for entry in rawinvarnames:
     newentry=entry.strip()
